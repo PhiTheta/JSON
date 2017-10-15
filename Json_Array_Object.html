@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creation of array object in javascript using JSON</title>
+    <script language="javascript">
+        document.writeln("<h2>JSON array object</h2>");
+        var books = {
+            "Python": [{
+                "Name": "Python Made Simple",
+                "Price": 250
+            }, {
+                "Name": "Python for Data Science",
+                "Price": 450
+            }],
+            "R": [{
+                "Name": "R for Dummys",
+                "Price": 200
+            }, {
+                "Name": "R Receipies",
+                "Price": 300
+            }]
+        }
+
+        var i = 0;
+        document.writeln("<table border='2' width='100%'><tr>");
+        for (i = 0; i < books.Python.length; i++) {
+            document.writeln("<td>");
+            document.writeln("<table border='1' widhth='100%'>");
+            document.writeln("<tr><td><b>Name</b></td><td>" + books.Python[i].Name + "</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td>" + books.Python[i].Price + "</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+        }
+
+        for (i = 0; i < books.R.length; i++) {
+            document.writeln("<td>");
+            document.writeln("<table border='1' widhth='100%'>");
+            document.writeln("<tr><td><b>Name</b></td><td>" + books.R[i].Name + "</td></tr>");
+            document.writeln("<tr><td><b>Price</b></td><td>" + books.R[i].Price + "</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+        }
+        document.writeln("</tr></table>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
